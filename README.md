@@ -1,9 +1,3 @@
-(Due to technical issues, the search service is temporarily unavailable.)
-
-Certainly! Here's a more polished and professional version of your project overview, with improved formatting and language:
-
----
-
 # Restaurant Website Project
 
 ## Overview
