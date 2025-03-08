@@ -34,37 +34,11 @@ restaurant-website/
 
 ```
 
-**Installation & Setup**
-------------------------
-
-1.  **Clone the repository**:
-
-    ```
-    git clone https://github.com/yourusername/restaurant-website.git
-    cd restaurant-website
-
-    ```
-
-2.  **Install dependencies**:
-
-    ```
-    npm install
-
-    ```
-
-3.  **Run the development server**:
-
-    ```
-    npm run dev
-
-    ```
-
-    Open [http://localhost:3000](http://localhost:3000/) to view in the browser.
-
 **Deployment**
 --------------
 
-Deploy your application for free on **Vercel**:
+This application is deployed using **Vercel**:
+Deploy your own project following the steps below
 
 1.  Push your project to GitHub.
 2.  Go to [Vercel](https://vercel.com/) and import your GitHub repo.
@@ -90,16 +64,7 @@ Deploy your application for free on **Vercel**:
 **Screenshots**
 ---------------
 
-Include screenshots of the website on mobile and desktop views.
-
-**Contributing**
-----------------
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature-name`).
-3.  Commit your changes (`git commit -m 'Added feature'`).
-4.  Push to the branch (`git push origin feature-name`).
-5.  Open a Pull Request.
+~IN PROGRESS~
 
 **License**
 -----------
