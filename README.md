@@ -64,7 +64,7 @@ restaurant-website/
 
 The application is deployed on **Vercel**, providing fast and reliable hosting with automatic CI/CD integration.  
 
-**Live Demo:** [Insert Vercel Deployment Link Here]
+**Live Demo:** *In progress*
 
 ---
 
