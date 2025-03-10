@@ -6,28 +6,18 @@ This project is a modern, responsive restaurant website built using **React (Vit
 
 ---
 
-## Key Features
+## Features
 
-- **⚡ Fast Development with Vite**: Leverage Vite's optimized build process and hot module replacement for a seamless development experience.
-
-- **📱 Responsive Design**: A fully mobile-friendly layout powered by Tailwind CSS, ensuring a consistent experience across all devices.
-
-- **🍽️ Dynamic Menu Page**: Displays food items and pricing dynamically using TypeScript props for easy updates and maintenance.
-
-- **📸 Image Gallery**: A sleek slider showcasing high-quality images of the restaurant and its offerings.
-
-- **📝 Contact Form with Validation**: A user-friendly contact form with built-in input validation for better user interaction.
-
-- **📍 Google Maps Integration**: An embedded Google Map to help customers easily locate the restaurant.
-
-- **🧩 Reusable Components**: Modular design with reusable UI components like the navigation bar, footer, and more for efficient development.
-
----
+1. Responsive Design
+2. Dynamic Menu Page
+3. Image Gallery
+4. Contact Form with Validation
+5. Google Maps Integration
+6. Reusable Components
 
 ## Project Structure
 
 ```
-
 restaurant-website/
 
 │── public/                 # Static assets (images, favicon, etc.)
@@ -118,9 +108,7 @@ The application is deployed on **Vercel**, providing fast and reliable hosting w
 
 ---
 
-## Learning Path
-
-This project is an excellent opportunity to explore and master the following concepts:
+## Learning Objectives: 
 
 1\. **React Basics**: Components, props, state, and hooks.  
 
@@ -132,7 +120,9 @@ This project is an excellent opportunity to explore and master the following con
 
 5\. **Project Structuring**: Organizing components, pages, and assets for scalability.  
 
-6\. **Deployment**: Hosting the project on Vercel with CI/CD integration.
+6\. **Building with Next.js**
+
+7\. **Deployment**: Hosting the project on Vercel with CI/CD integration.
 
 ---
 
