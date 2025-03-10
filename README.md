@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a modern, responsive restaurant website built using **React (Vite)**, **TypeScript**, and **Tailwind CSS**. The website features multiple pages, including a home page, menu, about section, image gallery, and a contact page with an integrated form and Google Maps location. Designed with both usability and aesthetics in mind, this project showcases best practices in front-end development and modern web technologies.
+This project is a modern, responsive restaurant website built using **Next.js**, **React (Vite)**, **TypeScript**, and **Tailwind CSS**. The website features multiple pages, including a home page, menu, about section, image gallery, and a contact page with an integrated form and Google Maps location. Designed with both usability and aesthetics in mind, this project showcases best practices in front-end development and modern web technologies.
 
 ---
 
