@@ -4,8 +4,6 @@
 
 This project is a modern, responsive restaurant website built using **Next.js**, **React (Vite)**, **TypeScript**, and **Tailwind CSS**. The website features multiple pages, including a home page, menu, about section, image gallery, and a contact page with an integrated form and Google Maps location. 
 
----
-
 ## Features
 
 1. Responsive Design
