@@ -92,7 +92,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative h-[500px] md:h-[400px] lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.073292073073!2d-73.9873086845949!3d40.73082497932869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f4f1b45c3d%3A0x7f3f1f1f0f1f1f1f!2sKiki&#39;s%20Greek%20Tavern!5e0!3m2!1sen!2sus!4v1632213660734!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1574777267424!2d-73.99443402335767!3d40.71454967139325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a28f45aed0f%3A0x1edb7a4bfca2349d!2sKiki&#39;s!5e0!3m2!1sen!2sus!4v1742175736090!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

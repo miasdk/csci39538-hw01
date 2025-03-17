@@ -1,0 +1,10 @@
+/* [project]/app/menu/styles.css [app-client] (css) */
+.menu-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat (auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
+
+
+/*# sourceMappingURL=app_menu_styles_9e0a06ee.css.map*/
