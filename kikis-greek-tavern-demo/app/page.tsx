@@ -1,102 +1,138 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="min-h-screen flex flex-col">
+      <div className="relative h-[400px] md:h-[700px] flex items-center justify-center text-center text-white">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/images/hero-1.jpg" 
+          alt="Restaurant Interior"
+          fill
+          className="object-cover"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="z-10 p-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Restaurant</h1>
+          <p className="text-xl md:text-xl text-bold mb-4">Located in the Heart of Lower Manhattan</p>
+          <div className="flex justify-center">
+          <Link
+            href="/menu" 
+            className="bg-orange-500 text-white py-2 px-6 rounded-md text-lg hover:bg-orange-600 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            View Menu
+          </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      <div className="w-full py-12 bg-neutral-100"> 
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Specialties</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="relative h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/hummus.jpg"
+                  alt="Hummus"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 mt-4">Hummus</h3>
+              <p className="text-gray-600">A delicious blend of chickpeas, tahini, lemon, and garlic.</p>
+              <Link
+                href="/menu"
+                className="text-orange-500 hover:underline mt-2 inline-block"
+              >
+                View Full Menu
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="relative h-72 md:h-96 lg:h-112 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/moussaka.jpg"
+                  alt="Moussaka"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 mt-4">Moussaka</h3>
+              <p className="text-gray-600">Layers of eggplant, ground beef, and béchamel sauce.</p>
+              <Link
+                href="/menu"
+                className="text-orange-500 hover:underline mt-2 inline-block"
+              >
+                View Full Menu
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="relative h-56 md:h-72 lg:h-88 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/baklava.jpg"
+                  alt="Baklava"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 mt-4">Baklava</h3>
+              <p className="text-gray-600">Sweet layers of filo dough, nuts, and honey.</p>
+              <Link
+                href="/menu"
+                className="text-orange-500 hover:underline mt-2 inline-block"
+              >
+                View Full Menu
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div className="container mx-auto py-12 bg-gray-10">
+        <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="relative h-[500px] md:h-[400px] lg:h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.073292073073!2d-73.9873086845949!3d40.73082497932869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f4f1b45c3d%3A0x7f3f1f1f0f1f1f1f!2sKiki&#39;s%20Greek%20Tavern!5e0!3m2!1sen!2sus!4v1632213660734!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 w-full h-full rounded-lg"
+            ></iframe>
+          </div>
+          <div>
+            <p className="text-lg">
+              Kiki's Greek Tavern is a family-owned restaurant that has been serving authentic Greek cuisine for over 20 years. Our dishes are made with fresh, locally-sourced ingredients and are prepared using traditional Greek recipes. We take pride in offering our customers a taste of Greece in every bite.
+            </p>
+            <p className="mt-4 text-lg">
+              Our menu features a variety of classic Greek dishes, including moussaka, spanakopita, and baklava. We also offer a selection of vegetarian and vegan options, as well as a variety of Greek wines and beers to complement your meal.
+            </p>
+            <p className="mt-4 text-lg">
+              Whether you're looking for a quick lunch or a leisurely dinner, Kiki's Greek Tavern is the perfect place to enjoy a delicious meal in a warm and welcoming atmosphere. We look forward to serving you soon!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-100 py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p className="text-gray-600 mb-8">
+            Have questions or want to make a reservation? We’d love to hear from you!
+          </p>
+          <Link
+            href="/contact" 
+            className="bg-orange-500 text-white py-2 px-6 rounded-md text-lg hover:bg-orange-600 transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
+
+
+      <footer className="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2023 My Restaurant. All rights reserved.</p>
       </footer>
     </div>
   );

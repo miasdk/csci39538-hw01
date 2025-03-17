@@ -45,7 +45,8 @@ export default function MenuPage() {
         <div className='container mx-auto py-8'>
             <h1 className='text-3xl font-bold mb-8 text-center'>Menu</h1>
             <p className='text-gray-600 text-center mb-8'>
-                Indulge in the rich flavors of the Mediterranean with our carefully crafted menu. From savory classics like hummus and spanakopita to hearty mains like moussaka and gyro plates, each dish is made with fresh ingredients and a touch of tradition. Pair your meal with a glass of wine or finish with a sweet treat like baklava for the perfect dining experience.
+                Order online or visit us in person to
+                enjoy our delicious Greek dishes.
             </p>            
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {menuItems.map((item, index) => (
