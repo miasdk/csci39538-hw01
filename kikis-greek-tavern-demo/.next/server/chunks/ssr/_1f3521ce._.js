@@ -5,7 +5,6 @@ module.exports = {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// components/MenuItemWithHook.tsx
 __turbopack_context__.s({
     "default": (()=>MenuItem)
 });
@@ -21,18 +20,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 function MenuItem({ name, description, price, image }) {
     const { addToCart } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCart$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCart"])();
     const [notification, setNotification] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isAdding, setIsAdding] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const handleAddToCart = ()=>{
         addToCart({
             name,
             price,
             image
         });
-        // Show notification
+        setIsAdding(true);
+        setTimeout(()=>setIsAdding(false), 300);
         setNotification(`${name} added to cart!`);
         setTimeout(()=>setNotification(null), 3000);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "menu-item bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300",
+        className: `menu-item bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${isAdding ? 'scale-105' : ''}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative h-48 mb-4",
@@ -43,12 +44,12 @@ function MenuItem({ name, description, price, image }) {
                     className: "object-cover rounded-lg"
                 }, void 0, false, {
                     fileName: "[project]/components/MenuItem.tsx",
-                    lineNumber: 29,
+                    lineNumber: 31,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/MenuItem.tsx",
-                lineNumber: 28,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -59,7 +60,7 @@ function MenuItem({ name, description, price, image }) {
                         children: name
                     }, void 0, false, {
                         fileName: "[project]/components/MenuItem.tsx",
-                        lineNumber: 37,
+                        lineNumber: 39,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -75,12 +76,12 @@ function MenuItem({ name, description, price, image }) {
                                     d: "M10 2a1 1 0 0 1 .77.36l2.83 3.55 5.5.8a1 1 0 0 1 .55 1.7l-4.1 4.03 1 5.8a1 1 0 0 1-1.45 1.05L10 16.39l-5.4 2.84a1 1 0 0 1-1.45-1.05l1-5.8-4.1-4.03a1 1 0 0 1 .55-1.7l5.5-.8 2.83-3.55A1 1 0 0 1 10 2z"
                                 }, void 0, false, {
                                     fileName: "[project]/components/MenuItem.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 42,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/MenuItem.tsx",
-                                lineNumber: 39,
+                                lineNumber: 41,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -88,19 +89,19 @@ function MenuItem({ name, description, price, image }) {
                                 children: "4.5"
                             }, void 0, false, {
                                 fileName: "[project]/components/MenuItem.tsx",
-                                lineNumber: 46,
+                                lineNumber: 48,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/MenuItem.tsx",
-                        lineNumber: 38,
+                        lineNumber: 40,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/MenuItem.tsx",
-                lineNumber: 36,
+                lineNumber: 38,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -108,7 +109,7 @@ function MenuItem({ name, description, price, image }) {
                 children: description
             }, void 0, false, {
                 fileName: "[project]/components/MenuItem.tsx",
-                lineNumber: 49,
+                lineNumber: 51,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -122,7 +123,7 @@ function MenuItem({ name, description, price, image }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/MenuItem.tsx",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -131,13 +132,13 @@ function MenuItem({ name, description, price, image }) {
                         children: "Add to Cart"
                     }, void 0, false, {
                         fileName: "[project]/components/MenuItem.tsx",
-                        lineNumber: 52,
+                        lineNumber: 54,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/MenuItem.tsx",
-                lineNumber: 50,
+                lineNumber: 52,
                 columnNumber: 13
             }, this),
             notification && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -145,13 +146,13 @@ function MenuItem({ name, description, price, image }) {
                 children: notification
             }, void 0, false, {
                 fileName: "[project]/components/MenuItem.tsx",
-                lineNumber: 62,
+                lineNumber: 63,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/MenuItem.tsx",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }

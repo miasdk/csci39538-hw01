@@ -21,7 +21,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Cart() {
     _s();
-    const { cart, total, updateQuantity, removeItem } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCart"])();
+    const { cart, total, updateQuantity, removeItem, clearCart } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCart"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "container mx-auto py-8",
         children: [
@@ -114,7 +114,7 @@ function Cart() {
                                         className: "flex items-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "bg-gray-200 px-3 py-1 rounded-l-md",
+                                                className: "bg-gray-200 px-3 py-1 rounded-l-md hover:bg-gray-300",
                                                 onClick: ()=>updateQuantity(index, item.quantity - 1),
                                                 children: "-"
                                             }, void 0, false, {
@@ -131,7 +131,7 @@ function Cart() {
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "bg-gray-200 px-3 py-1 rounded-r-md",
+                                                className: "bg-gray-200 px-3 py-1 rounded-r-md hover:bg-gray-300",
                                                 onClick: ()=>updateQuantity(index, item.quantity + 1),
                                                 children: "+"
                                             }, void 0, false, {
@@ -160,7 +160,7 @@ function Cart() {
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: "text-red-500 text-sm mt-1",
+                                                className: "text-red-500 text-sm mt-1 hover:text-red-700",
                                                 onClick: ()=>removeItem(index),
                                                 children: "Remove"
                                             }, void 0, false, {
@@ -263,12 +263,30 @@ function Cart() {
                                 lineNumber: 75,
                                 columnNumber: 25
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "w-full bg-orange-500 text-white mt-6 py-3 rounded-md hover:bg-orange-600 transition-colors",
-                                children: "Proceed to Checkout"
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex gap-4 mt-6",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "flex-1 bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition-colors",
+                                        children: "Proceed to Checkout"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Cart.tsx",
+                                        lineNumber: 81,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>clearCart(),
+                                        className: "px-4 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-50 transition-colors",
+                                        children: "Clear Cart"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Cart.tsx",
+                                        lineNumber: 86,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/Cart.tsx",
-                                lineNumber: 79,
+                                lineNumber: 80,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -290,7 +308,7 @@ function Cart() {
         columnNumber: 9
     }, this);
 }
-_s(Cart, "GNN+/Boe4/2UCu8eyxP7gFVCpDw=", false, function() {
+_s(Cart, "xa6MTkzb3Wq9wNZvcg4fZey7PEQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCart$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCart"]
     ];

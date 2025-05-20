@@ -1,5 +1,3 @@
-// public/cart.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize cart from localStorage or create empty cart
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
