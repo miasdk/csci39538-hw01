@@ -1,10 +1,15 @@
+// components/Navbar.tsx
 'use client'; 
 import { useState } from 'react';
 import { ShoppingCart, Menu, X} from 'react-feather';
 import Link from 'next/link';
+import { useCart } from '../hooks/useCart';
 
 export default function Navbar(){ 
     const [isOpen, setIsOpen] = useState(false);
+    const { cart } = useCart();
+    
+    const cartItemCount = cart.reduce((count, item) => count + item.quantity, 0);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -22,7 +27,7 @@ export default function Navbar(){
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-                <ul className='hidden md:flex space-x-4'>
+                <ul className='hidden md:flex space-x-4 items-center'>
                     <li>
                         <Link href='/'>Home</Link>
                     </li>
@@ -39,8 +44,15 @@ export default function Navbar(){
                         <Link href='/about'>About</Link>
                     </li>
                     <li>
-                        <Link href='/cart'>
+                        <Link href='/cart' className="nav-cart-icon relative">
                             <ShoppingCart />
+                            {cartItemCount > 0 && (
+                                <span 
+                                    className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                                >
+                                    {cartItemCount}
+                                </span>
+                            )}
                         </Link>
                     </li>
                 </ul>
@@ -68,12 +80,19 @@ export default function Navbar(){
                         </Link>
                     </li>
                     <li>
-                        <Link href="/cart" className="hover:text-gray-400" onClick={toggleMenu}>
-                            Cart
+                        <Link href='/cart' className="relative" onClick={toggleMenu}>
+                            <ShoppingCart />
+                            {cartItemCount > 0 && (
+                                <span 
+                                    className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                                >
+                                    {cartItemCount}
+                                </span>
+                            )}
                         </Link>
                     </li>   
                 </ul>
             </div>
         </nav>
-    )
+    );
 }

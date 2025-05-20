@@ -1,6 +1,7 @@
-import MenuItem from '../../components/MenuItem';
-import '../menu/styles.css'
+// app/menu/page.tsx
+'use client';
 
+import MenuItem from '../../components/MenuItem';
 const menuItems = [ 
     {
         name: 'Hummus',
@@ -50,7 +51,6 @@ export default function MenuPage() {
             </p>            
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {menuItems.map((item, index) => (
-                    console.log(item.image),
                     <MenuItem key={index} {...item} />
                 ))}
             </div>
