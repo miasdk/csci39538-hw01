@@ -3,6 +3,7 @@
 import { useCart } from '../context/CartContext';
 import Image from 'next/image';
 import { X } from 'react-feather';
+import Link from 'next/link';
 
 interface CartModalProps {
   isOpen: boolean;
@@ -17,7 +18,6 @@ export default function CartModal({ isOpen, onClose, showBackdrop = true }: Cart
 
   return (
     <>
-      {/* Modal Backdrop */}
       {showBackdrop && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -41,11 +41,18 @@ export default function CartModal({ isOpen, onClose, showBackdrop = true }: Cart
           {cart.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-xl mb-6">Your cart is empty</p>
-              <button 
-                onClick={onClose}
+              <Link 
+                href="/menu" 
                 className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition-colors"
               >
                 Browse Menu
+              </Link>
+              <p className="mt-4 text-gray-500">or</p>
+              <button
+                onClick={onClose}
+                className="mt-2 text-gray-500 underline"
+              >
+                Continue Shopping
               </button>
             </div>
           ) : (
